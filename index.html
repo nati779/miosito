@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MIOSITO.IT · Il sito perfetto per la tua impresa</title>
+  <title>MIOSITO.IT · Il tuo spazio ufficiale online</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -29,303 +29,240 @@
     body { font-family: 'Lora', Georgia, serif; background: #faf8f3; color: #0d1b2a; }
     h1,h2,h3,h4 { font-family: 'Playfair Display', Georgia, serif; }
     .hero-bg { background: linear-gradient(135deg, #0d1b2a 0%, #1b2e45 60%, #2e5077 100%); }
-
-    /* Demo modal */
     .demo-overlay { display:none; position:fixed; inset:0; background:rgba(13,27,42,0.88); z-index:9999; overflow-y:auto; }
     .demo-overlay.active { display:flex; align-items:flex-start; justify-content:center; padding:24px 16px; }
     .demo-content { background:#fff; border-radius:16px; max-width:860px; width:100%; position:relative; overflow:hidden; margin-bottom:40px; }
     .close-btn { position:absolute; top:14px; right:18px; font-size:26px; cursor:pointer; color:white; font-weight:700; z-index:10; text-shadow:0 1px 6px rgba(0,0,0,0.6); }
-
-    /* Card hover */
     .demo-card { cursor:pointer; transition: transform 0.22s, box-shadow 0.22s; }
     .demo-card:hover { transform:translateY(-7px); box-shadow:0 18px 44px rgba(13,27,42,0.18); }
-
-    /* Animations */
     .fade-in { opacity:0; transform:translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .fade-in.visible { opacity:1; transform:translateY(0); }
-
-    /* FAQ accordion */
     .faq-body { max-height:0; overflow:hidden; transition:max-height 0.35s ease; }
     .faq-body.open { max-height:500px; }
     .faq-arrow { transition: transform 0.3s; }
     .faq-arrow.open { transform: rotate(180deg); }
-
-    /* WhatsApp float */
-    .wa-float {
-      position:fixed; bottom:26px; right:26px; z-index:8888;
-      background:#25D366; color:white;
-      border-radius:50px; padding:14px 22px;
-      display:flex; align-items:center; gap:10px;
-      font-family:'Lora',serif; font-weight:700; font-size:15px;
-      box-shadow:0 6px 28px rgba(37,211,102,0.45);
-      text-decoration:none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      animation: waPulse 2.5s infinite;
-    }
-    .wa-float:hover { transform:scale(1.07); box-shadow:0 10px 36px rgba(37,211,102,0.6); }
-    @keyframes waPulse {
-      0%,100% { box-shadow:0 6px 28px rgba(37,211,102,0.45); }
-      50% { box-shadow:0 6px 40px rgba(37,211,102,0.75), 0 0 0 10px rgba(37,211,102,0.08); }
-    }
+    .wa-float { position:fixed; bottom:26px; right:26px; z-index:8888; background:#25D366; color:white; border-radius:50px; padding:14px 22px; display:flex; align-items:center; gap:10px; font-family:'Lora',serif; font-weight:700; font-size:15px; box-shadow:0 6px 28px rgba(37,211,102,0.45); text-decoration:none; transition: transform 0.2s, box-shadow 0.2s; animation: waPulse 2.5s infinite; }
+    .wa-float:hover { transform:scale(1.07); }
     .wa-float svg { width:26px; height:26px; fill:white; flex-shrink:0; }
-    .wa-icon { width:26px; height:26px; fill:white; flex-shrink:0; display:inline-block; vertical-align:middle; }
+    @keyframes waPulse { 0%,100% { box-shadow:0 6px 28px rgba(37,211,102,0.45); } 50% { box-shadow:0 6px 40px rgba(37,211,102,0.75), 0 0 0 10px rgba(37,211,102,0.08); } }
+    .bio-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.3); border-radius:50px; padding:8px 18px; font-family:'Lora',serif; font-size:13px; color:white; }
   </style>
 </head>
 <body>
 
-<!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+<!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/393282608679" target="_blank" class="wa-float">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   Scrivimi su WhatsApp
 </a>
 
-
-<!-- ===== NAVBAR ===== -->
+<!-- NAVBAR -->
 <nav class="fixed top-0 left-0 right-0 z-50 bg-navy-900 bg-opacity-95 backdrop-blur shadow-md">
   <div class="max-w-6xl mx-auto px-5 py-3 flex items-center justify-center">
     <span class="text-white font-heading text-xl font-bold tracking-wide text-center">
-      <span class="text-gold-400">MIOSITO.IT</span> <span class="text-blue-200 font-body font-normal text-base">· il sito perfetto per te</span>
+      <span class="text-gold-400">MIOSITO.IT</span>
+      <span class="text-blue-200 font-body font-normal text-base"> · il sito perfetto per te</span>
     </span>
   </div>
 </nav>
 
-
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section class="hero-bg pt-28 pb-20 px-5 text-center">
   <div class="max-w-3xl mx-auto fade-in">
-    <p class="text-gold-400 font-body text-sm font-semibold tracking-widest uppercase mb-4">Per Piccole e Medie Imprese Italiane</p>
+    <div class="bio-badge mb-6 mx-auto w-fit">
+      📲 Pensato per chi ha già i social — e vuole fare il salto di qualità
+    </div>
     <h1 class="text-white text-4xl md:text-5xl font-heading leading-tight mb-6">
-      Il Tuo Sito Web Professionale,<br>
-      <span class="text-gold-400">Senza Sorprese.</span>
+      Il Tuo Spazio Ufficiale Online.<br>
+      <span class="text-gold-400">Finalmente.</span>
     </h1>
     <p class="text-blue-100 text-lg md:text-xl font-body leading-relaxed mb-8 max-w-2xl mx-auto">
-      Creo siti web su misura per artigiani, negozi, studi professionali e aziende locali.
-      Ti spiego tutto passo per passo, in italiano semplice, senza termini tecnici.
-      <strong class="text-white">E il risultato lo vedi prima di pagare.</strong>
+      Hai Instagram, Facebook, TikTok. I tuoi contenuti sono curati, i clienti ti seguono.
+      Ma nella bio c'è ancora il link a niente.
+      <strong class="text-white">È ora di avere uno spazio ufficiale che ti rappresenti davvero.</strong>
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="https://wa.me/393282608679?text=Ciao!%20Vorrei%20informazioni%20per%20un%20sito%20web." target="_blank"
+      <a href="https://wa.me/393282608679?text=Ciao!%20Vorrei%20uno%20spazio%20ufficiale%20per%20la%20mia%20attività." target="_blank"
          class="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-full text-lg transition-colors shadow-lg flex items-center justify-center gap-2">
-        💬 Scrivimi su WhatsApp
+        💬 Parliamone su WhatsApp
       </a>
-      <a href="#demo" class="border-2 border-white text-white hover:bg-white hover:text-navy-900 font-semibold px-8 py-4 rounded-full text-lg transition-colors">
+      <a href="#esempi" class="border-2 border-white text-white hover:bg-white hover:text-navy-900 font-semibold px-8 py-4 rounded-full text-lg transition-colors">
         👁️ Guarda gli Esempi
       </a>
     </div>
-    <p class="text-blue-200 text-sm mt-6 font-body italic">Rispondo in poche ore · Nessun impegno</p>
+    <p class="text-blue-200 text-sm mt-6 font-body italic">Pronto in 24/48 ore · Nessun impegno</p>
   </div>
 </section>
 
-
-<!-- ===== TRUST BAR ===== -->
+<!-- TRUST BAR -->
 <section class="bg-white border-b border-gray-200 py-6 px-5">
   <div class="max-w-5xl mx-auto flex flex-wrap justify-center gap-8 text-center">
-    <div class="flex items-center gap-2 text-navy-800"><span class="text-2xl">🛡️</span><span class="font-semibold text-sm">Soddisfatto o rimborsato</span></div>
-    <div class="flex items-center gap-2 text-navy-800"><span class="text-2xl">👁️</span><span class="font-semibold text-sm">Vedi la bozza prima di pagare</span></div>
+    <div class="flex items-center gap-2 text-navy-800"><span class="text-2xl">🔗</span><span class="font-semibold text-sm">Il link perfetto per la tua bio</span></div>
+    <div class="flex items-center gap-2 text-navy-800"><span class="text-2xl">✨</span><span class="font-semibold text-sm">Design elegante e curato</span></div>
+    <div class="flex items-center gap-2 text-navy-800"><span class="text-2xl">⚡</span><span class="font-semibold text-sm">Pronto in 24/48 ore</span></div>
     <div class="flex items-center gap-2 text-navy-800"><span class="text-2xl">📍</span><span class="font-semibold text-sm">Di persona in provincia di Cuneo</span></div>
-    <div class="flex items-center gap-2 text-navy-800"><span class="text-2xl">🇮🇹</span><span class="font-semibold text-sm">Italiano. Senza tecnicismi.</span></div>
   </div>
 </section>
 
-
-<!-- ===== BANNER CUNEO ===== -->
+<!-- BANNER CUNEO -->
 <section class="bg-gold-500 py-7 px-5">
   <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5 text-navy-900">
     <div>
-      <p class="font-heading text-xl font-bold mb-1">📍 Vengo da te, in provincia di Cuneo</p>
-      <p class="font-body text-sm leading-relaxed">
-        Sono disponibile per incontri di persona ad <strong>Alba, Bra, Cuneo, Saluzzo, Mondovì, Fossano</strong> e in tutta la provincia.
-        Preferisci lavorare faccia a faccia? Nessun problema — porto il portatile e ti mostro tutto di persona.
-        Per progetti più importanti, <strong>sono disposto a spostarmi anche fuori provincia</strong>.
-      </p>
+      <p class="font-heading text-xl font-bold mb-1">📍 Ci incontriamo di persona, in provincia di Cuneo</p>
+      <p class="font-body text-sm leading-relaxed">Disponibile ad <strong>Alba, Bra, Cuneo, Saluzzo, Mondovì, Fossano</strong> e in tutta la provincia. Per progetti più importanti, <strong>mi sposto anche fuori provincia</strong>.</p>
     </div>
-    <a href="https://wa.me/393282608679?text=Ciao!%20Vorrei%20fissare%20un%20appuntamento%20di%20persona." target="_blank"
+    <a href="https://wa.me/393282608679?text=Ciao!%20Vorrei%20fissare%20un%20appuntamento." target="_blank"
        class="flex-shrink-0 bg-navy-900 text-white font-semibold px-6 py-3 rounded-full text-sm hover:bg-navy-800 transition-colors whitespace-nowrap">
-      📅 Fissa un appuntamento
+      📅 Fissa un incontro
     </a>
   </div>
 </section>
 
-
-<!-- ===== SMONTA I DUBBI ===== -->
+<!-- IL PROBLEMA -->
 <section class="py-20 px-5 bg-cream">
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-14 fade-in">
-      <p class="text-gold-500 text-sm font-semibold tracking-widest uppercase mb-2">Ho capito le tue preoccupazioni</p>
-      <h2 class="text-3xl md:text-4xl font-heading text-navy-900 mb-4">"Ho già sentito queste promesse..."</h2>
-      <p class="text-gray-600 text-lg font-body max-w-xl mx-auto">Hai ragione ad essere cauto. Ecco le risposte oneste alle domande che tutti mi fanno.</p>
+      <p class="text-gold-500 text-sm font-semibold tracking-widest uppercase mb-2">Riconosci questa situazione?</p>
+      <h2 class="text-3xl md:text-4xl font-heading text-navy-900 mb-4">I tuoi social sono curati.<br>Ma qualcosa manca ancora.</h2>
+      <p class="text-gray-600 text-lg font-body max-w-2xl mx-auto">Hai una bella pagina Instagram, i clienti ti scrivono in DM, fai ottimi contenuti. Ma quando qualcuno clicca sulla bio… non trova niente all'altezza di quello che sei.</p>
     </div>
     <div class="grid md:grid-cols-2 gap-6">
       <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-gold-400 fade-in">
-        <p class="text-rust font-heading text-lg mb-2">❌ "Non capisco niente di informatica."</p>
-        <p class="text-gray-700 font-body leading-relaxed">Non devi capirla. Pensa al tuo sito come a un arredamento: tu mi dici i colori, cosa vuoi mostrare e a chi. Ci penso io al resto. Ci sentiamo via WhatsApp, al telefono o di persona. Nessuna email tecnica incomprensibile.</p>
+        <p class="text-rust font-heading text-lg mb-2">😓 "Nella mia bio non c'è un link decente."</p>
+        <p class="text-gray-700 font-body leading-relaxed">Un profilo Instagram curato merita uno spazio all'altezza. Con il tuo sito ufficiale, chi clicca sulla bio arriva in un ambiente elegante, professionale, tutto tuo. Non una pagina generica — il tuo mondo.</p>
       </div>
       <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-gold-400 fade-in">
-        <p class="text-rust font-heading text-lg mb-2">❌ "Quanto costerà davvero alla fine?"</p>
-        <p class="text-gray-700 font-body leading-relaxed">Ti invio un preventivo scritto e dettagliato prima di iniziare qualsiasi lavoro. Il prezzo non cambia. Nessuna sorpresa, nessun extra nascosto. Se non ti va bene, sei libero di andare.</p>
+        <p class="text-rust font-heading text-lg mb-2">😓 "I clienti non trovano le info fuori dai social."</p>
+        <p class="text-gray-700 font-body leading-relaxed">Orari, menù, prezzi, prenotazioni: i clienti cercano queste informazioni e spesso non le trovano facilmente. Il tuo sito diventa il riferimento ufficiale, sempre aggiornato, accessibile in un click dalla bio.</p>
       </div>
       <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-gold-400 fade-in">
-        <p class="text-rust font-heading text-lg mb-2">❌ "E se non mi piace il risultato?"</p>
-        <p class="text-gray-700 font-body leading-relaxed">Prima di pubblicare, ti mostro una bozza completa. Hai diritto a richiedere modifiche. Pubblichiamo solo quando sei soddisfatto al 100%. Lo mettiamo per iscritto nel contratto.</p>
+        <p class="text-rust font-heading text-lg mb-2">😓 "Sembro meno professionale dei concorrenti."</p>
+        <p class="text-gray-700 font-body leading-relaxed">Un sito ben fatto trasmette serietà e cura. Non è una questione tecnica — è immagine. Chi arriva sul tuo sito percepisce subito che la tua attività è un gradino sopra. E torna.</p>
       </div>
       <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-gold-400 fade-in">
-        <p class="text-rust font-heading text-lg mb-2">❌ "Avrò bisogno di un tecnico ogni volta?"</p>
-        <p class="text-gray-700 font-body leading-relaxed">Ti consegno un pannello semplice. Puoi aggiornare foto, testi e orari da solo, dal telefono. E se hai dubbi, sono su WhatsApp — per sempre, senza costi extra.</p>
+        <p class="text-rust font-heading text-lg mb-2">😓 "L'algoritmo è imprevedibile, i social cambiano."</p>
+        <p class="text-gray-700 font-body leading-relaxed">Instagram cambia le regole, TikTok oscilla. Il tuo sito è tuo per sempre — nessun algoritmo decide la visibilità. È lo spazio stabile su cui costruire la tua identità digitale nel tempo.</p>
       </div>
       <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-gold-400 fade-in">
-        <p class="text-rust font-heading text-lg mb-2">❌ "Un sito serve davvero alla mia attività?"</p>
-        <p class="text-gray-700 font-body leading-relaxed">Oggi l'83% degli italiani cerca su Google prima di entrare in un negozio o chiamare un professionista. Se non ti trovano online, scelgono il concorrente. Il tuo sito è aperto 24 ore su 24.</p>
+        <p class="text-rust font-heading text-lg mb-2">😓 "Non ho tempo per occuparmi di queste cose."</p>
+        <p class="text-gray-700 font-body leading-relaxed">Gestisci un'attività, non puoi stare dietro a tutto. Mi occupo io di tutto. Tu mi dici com'è la tua attività e cosa vuoi trasmettere. In 24/48 ore hai la bozza pronta, senza capire niente di tecnico.</p>
       </div>
       <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-gold-400 fade-in">
-        <p class="text-rust font-heading text-lg mb-2">❌ "Ci vuole una vita per farlo."</p>
-        <p class="text-gray-700 font-body leading-relaxed">Dal primo contatto alla pubblicazione: in molti casi il sito è <strong>pronto in 24/48 ore</strong>. Per siti più elaborati bastano <strong>pochi giorni</strong>, mai settimane. Ti tengo aggiornato ad ogni passaggio con un messaggio semplice. Niente attese infinite.</p>
+        <p class="text-rust font-heading text-lg mb-2">😓 "Non so se vale la pena spendere soldi."</p>
+        <p class="text-gray-700 font-body leading-relaxed">Vedi la bozza completa prima di pagare. Se non ti convince al 100%, non paghi. Zero rischi. Il tuo sito non è una spesa — è un investimento nell'immagine della tua attività.</p>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- ===== COME FUNZIONA ===== -->
+<!-- COME FUNZIONA -->
 <section class="py-20 px-5 bg-navy-900 text-white">
   <div class="max-w-4xl mx-auto text-center mb-14 fade-in">
-    <p class="text-gold-400 text-sm font-semibold tracking-widest uppercase mb-2">Nessuna sorpresa</p>
-    <h2 class="text-3xl md:text-4xl font-heading mb-4">Come Funziona il Processo</h2>
-    <p class="text-blue-200 font-body text-lg">4 passi semplici. Ci sei tu in ogni momento.</p>
+    <p class="text-gold-400 text-sm font-semibold tracking-widest uppercase mb-2">Il processo</p>
+    <h2 class="text-3xl md:text-4xl font-heading mb-4">Dalla Chiacchierata al Link in Bio</h2>
+    <p class="text-blue-200 font-body text-lg">4 passi. Semplice come ordinare una pizza.</p>
   </div>
   <div class="max-w-3xl mx-auto space-y-10">
     <div class="flex gap-5 items-start fade-in">
       <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gold-500 text-navy-900 flex items-center justify-center font-heading font-bold text-xl">1</div>
-      <div><h3 class="text-xl font-heading mb-1 text-gold-400">Chiamata o incontro conoscitivo (gratuito)</h3>
-      <p class="text-blue-100 font-body leading-relaxed">Mi racconti la tua attività, i tuoi clienti, cosa ti aspetti. Possiamo sentirci via WhatsApp, al telefono o vederci di persona in provincia di Cuneo. Ti faccio un preventivo chiaro entro 24 ore.</p></div>
+      <div><h3 class="text-xl font-heading mb-1 text-gold-400">Mi racconti la tua attività (gratis)</h3>
+      <p class="text-blue-100 font-body leading-relaxed">Una chiacchierata su WhatsApp o di persona. Mi dici com'è la tua attività, che atmosfera vuoi trasmettere, chi sono i tuoi clienti. Nessun modulo, nessun termine tecnico. Parliamo e basta.</p></div>
     </div>
     <div class="flex gap-5 items-start fade-in">
       <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gold-500 text-navy-900 flex items-center justify-center font-heading font-bold text-xl">2</div>
-      <div><h3 class="text-xl font-heading mb-1 text-gold-400">Bozza e approvazione</h3>
-      <p class="text-blue-100 font-body leading-relaxed">Creo una prima bozza grafica del sito. La vedi tu per primo. Modifichiamo insieme finché non è esattamente come la vuoi. Posso mostrartela anche di persona.</p></div>
+      <div><h3 class="text-xl font-heading mb-1 text-gold-400">Creo la bozza del tuo sito</h3>
+      <p class="text-blue-100 font-body leading-relaxed">In 24/48 ore ti mando una bozza completa. La vedi tu per primo. Modifichiamo insieme finché non è esattamente come la immagini. Posso mostrartela anche di persona.</p></div>
     </div>
     <div class="flex gap-5 items-start fade-in">
       <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gold-500 text-navy-900 flex items-center justify-center font-heading font-bold text-xl">3</div>
-      <div><h3 class="text-xl font-heading mb-1 text-gold-400">Sviluppo e test</h3>
-      <p class="text-blue-100 font-body leading-relaxed">Costruisco il sito vero e proprio. Lo testo su smartphone, tablet e PC. Ti aggiorno con un messaggio ogni volta che c'è qualcosa da vedere o approvare.</p></div>
+      <div><h3 class="text-xl font-heading mb-1 text-gold-400">Approvi e pubblichiamo</h3>
+      <p class="text-blue-100 font-body leading-relaxed">Quando sei soddisfatto al 100%, pubblichiamo. Funziona perfetto su smartphone, tablet e PC. Ti spiego come aggiornarlo da solo in meno di un'ora — è facilissimo.</p></div>
     </div>
     <div class="flex gap-5 items-start fade-in">
       <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gold-500 text-navy-900 flex items-center justify-center font-heading font-bold text-xl">4</div>
-      <div><h3 class="text-xl font-heading mb-1 text-gold-400">Pubblicazione e formazione</h3>
-      <p class="text-blue-100 font-body leading-relaxed">Pubblichiamo insieme. Ti mostro come aggiornarlo da solo — di persona se preferisci. Rimango disponibile su WhatsApp per qualsiasi domanda, anche dopo mesi.</p></div>
+      <div><h3 class="text-xl font-heading mb-1 text-gold-400">Metti il link nella bio — e il gioco è fatto</h3>
+      <p class="text-blue-100 font-body leading-relaxed">Copi il link del tuo nuovo sito e lo incolli nella bio di Instagram, Facebook, TikTok. Da quel momento, ogni cliente che visita il tuo profilo arriva in uno spazio elegante e professionale. Tutto tuo.</p></div>
     </div>
   </div>
   <div class="max-w-3xl mx-auto mt-14 text-center fade-in">
-    <p class="text-gold-400 text-2xl md:text-3xl font-heading font-bold tracking-wide">
-      🍕 Semplice come ordinare una pizza.
-    </p>
+    <p class="text-gold-400 text-2xl md:text-3xl font-heading font-bold">🍕 Semplice come ordinare una pizza.</p>
     <p class="text-blue-200 font-body mt-3 text-base">Fai la chiamata, scegli cosa vuoi, aspetti la consegna. Fine.</p>
   </div>
 </section>
 
-
-<!-- ===== DEMO ESEMPI ===== -->
-<section id="demo" class="py-20 px-5 bg-cream">
+<!-- ESEMPI -->
+<section id="esempi" class="py-20 px-5 bg-cream">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-14 fade-in">
       <p class="text-gold-500 text-sm font-semibold tracking-widest uppercase mb-2">Esempi reali</p>
-      <h2 class="text-3xl md:text-4xl font-heading text-navy-900 mb-4">Com'è il Sito della Tua Attività?</h2>
-      <p class="text-gray-600 font-body text-lg max-w-xl mx-auto">Clicca su uno degli esempi e scopri com'è una pagina reale per la tua categoria.</p>
+      <h2 class="text-3xl md:text-4xl font-heading text-navy-900 mb-4">Come Potrebbe Essere il Tuo Sito</h2>
+      <p class="text-gray-600 font-body text-lg max-w-xl mx-auto">Clicca su un esempio e scopri come appare uno spazio ufficiale per la tua categoria.</p>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
+      <div class="demo-card bg-white rounded-2xl overflow-hidden shadow-md" onclick="openDemo('rifugio')">
+        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" alt="Rifugio" class="w-full h-44 object-cover">
+        <div class="p-5"><span class="text-xs text-gold-500 font-semibold uppercase tracking-widest">Esempio</span>
+          <h3 class="font-heading text-xl text-navy-900 mt-1 mb-2">Rifugio di Montagna</h3>
+          <p class="text-gray-500 text-sm font-body">Atmosfera, menù, prenotazioni, aperture stagionali, galleria.</p>
+          <p class="text-navy-700 font-semibold text-sm mt-3">👉 Clicca per vedere la demo →</p></div>
+      </div>
+      <div class="demo-card bg-white rounded-2xl overflow-hidden shadow-md" onclick="openDemo('sciclub')">
+        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&q=80" alt="Sci" class="w-full h-44 object-cover">
+        <div class="p-5"><span class="text-xs text-gold-500 font-semibold uppercase tracking-widest">Esempio</span>
+          <h3 class="font-heading text-xl text-navy-900 mt-1 mb-2">Sci Club / Scuola di Sci</h3>
+          <p class="text-gray-500 text-sm font-body">Corsi, istruttori, calendario, prezzi, iscrizioni online.</p>
+          <p class="text-navy-700 font-semibold text-sm mt-3">👉 Clicca per vedere la demo →</p></div>
+      </div>
+      <div class="demo-card bg-white rounded-2xl overflow-hidden shadow-md" onclick="openDemo('enoteca')">
+        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=80" alt="Vino" class="w-full h-44 object-cover">
+        <div class="p-5"><span class="text-xs text-gold-500 font-semibold uppercase tracking-widest">Esempio</span>
+          <h3 class="font-heading text-xl text-navy-900 mt-1 mb-2">Enoteca / Wine Bar</h3>
+          <p class="text-gray-500 text-sm font-body">Selezione vini, eventi degustazione, prenotazione tavoli.</p>
+          <p class="text-navy-700 font-semibold text-sm mt-3">👉 Clicca per vedere la demo →</p></div>
+      </div>
+      <div class="demo-card bg-white rounded-2xl overflow-hidden shadow-md" onclick="openDemo('bar')">
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80" alt="Bar" class="w-full h-44 object-cover">
+        <div class="p-5"><span class="text-xs text-gold-500 font-semibold uppercase tracking-widest">Esempio</span>
+          <h3 class="font-heading text-xl text-navy-900 mt-1 mb-2">Bar / Caffè</h3>
+          <p class="text-gray-500 text-sm font-body">Menù colazioni, aperitivi, orari, eventi, galleria locale.</p>
+          <p class="text-navy-700 font-semibold text-sm mt-3">👉 Clicca per vedere la demo →</p></div>
+      </div>
       <div class="demo-card bg-white rounded-2xl overflow-hidden shadow-md" onclick="openDemo('ristorante')">
         <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Ristorante" class="w-full h-44 object-cover">
-        <div class="p-5">
-          <span class="text-xs text-gold-500 font-semibold uppercase tracking-widest">Esempio</span>
-          <h3 class="font-heading text-xl text-navy-900 mt-1 mb-2">Ristorante / Pizzeria</h3>
-          <p class="text-gray-500 text-sm font-body">Menu online, prenotazione tavoli, foto del locale, orari e mappa.</p>
-          <p class="text-navy-700 font-semibold text-sm mt-3">👉 Clicca per vedere la demo →</p>
-        </div>
+        <div class="p-5"><span class="text-xs text-gold-500 font-semibold uppercase tracking-widest">Esempio</span>
+          <h3 class="font-heading text-xl text-navy-900 mt-1 mb-2">Ristorante / Osteria</h3>
+          <p class="text-gray-500 text-sm font-body">Menù stagionale, prenotazione, recensioni, orari.</p>
+          <p class="text-navy-700 font-semibold text-sm mt-3">👉 Clicca per vedere la demo →</p></div>
       </div>
-
-      <div class="demo-card bg-white rounded-2xl overflow-hidden shadow-md" onclick="openDemo('idraulico')">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Idraulico" class="w-full h-44 object-cover">
-        <div class="p-5">
-          <span class="text-xs text-gold-500 font-semibold uppercase tracking-widest">Esempio</span>
-          <h3 class="font-heading text-xl text-navy-900 mt-1 mb-2">Artigiano / Idraulico</h3>
-          <p class="text-gray-500 text-sm font-body">Servizi offerti, zona di lavoro, preventivo rapido, galleria lavori.</p>
-          <p class="text-navy-700 font-semibold text-sm mt-3">👉 Clicca per vedere la demo →</p>
-        </div>
+      <div class="demo-card bg-white rounded-2xl overflow-hidden shadow-md" onclick="openDemo('bb')">
+        <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=600&q=80" alt="BB" class="w-full h-44 object-cover">
+        <div class="p-5"><span class="text-xs text-gold-500 font-semibold uppercase tracking-widest">Esempio</span>
+          <h3 class="font-heading text-xl text-navy-900 mt-1 mb-2">B&B / Agriturismo</h3>
+          <p class="text-gray-500 text-sm font-body">Camere, servizi, disponibilità, galleria, prenotazione diretta.</p>
+          <p class="text-navy-700 font-semibold text-sm mt-3">👉 Clicca per vedere la demo →</p></div>
       </div>
-
-      <div class="demo-card bg-white rounded-2xl overflow-hidden shadow-md" onclick="openDemo('dentista')">
-        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80" alt="Dentista" class="w-full h-44 object-cover">
-        <div class="p-5">
-          <span class="text-xs text-gold-500 font-semibold uppercase tracking-widest">Esempio</span>
-          <h3 class="font-heading text-xl text-navy-900 mt-1 mb-2">Studio Dentistico</h3>
-          <p class="text-gray-500 text-sm font-body">Servizi, staff, prenotazione online, testimonianze pazienti.</p>
-          <p class="text-navy-700 font-semibold text-sm mt-3">👉 Clicca per vedere la demo →</p>
-        </div>
-      </div>
-
-      <div class="demo-card bg-white rounded-2xl overflow-hidden shadow-md" onclick="openDemo('immobiliare')">
-        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80" alt="Immobiliare" class="w-full h-44 object-cover">
-        <div class="p-5">
-          <span class="text-xs text-gold-500 font-semibold uppercase tracking-widest">Esempio</span>
-          <h3 class="font-heading text-xl text-navy-900 mt-1 mb-2">Agenzia Immobiliare</h3>
-          <p class="text-gray-500 text-sm font-body">Annunci immobili, filtri ricerca, form contatto, mappa.</p>
-          <p class="text-navy-700 font-semibold text-sm mt-3">👉 Clicca per vedere la demo →</p>
-        </div>
-      </div>
-
-      <div class="demo-card bg-white rounded-2xl overflow-hidden shadow-md" onclick="openDemo('estetica')">
-        <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&q=80" alt="Estetica" class="w-full h-44 object-cover">
-        <div class="p-5">
-          <span class="text-xs text-gold-500 font-semibold uppercase tracking-widest">Esempio</span>
-          <h3 class="font-heading text-xl text-navy-900 mt-1 mb-2">Centro Estetico / SPA</h3>
-          <p class="text-gray-500 text-sm font-body">Trattamenti, prezzi, prenotazione, galleria prima/dopo.</p>
-          <p class="text-navy-700 font-semibold text-sm mt-3">👉 Clicca per vedere la demo →</p>
-        </div>
-      </div>
-
-      <div class="demo-card bg-white rounded-2xl overflow-hidden shadow-md" onclick="openDemo('studio')">
-        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80" alt="Studio legale" class="w-full h-44 object-cover">
-        <div class="p-5">
-          <span class="text-xs text-gold-500 font-semibold uppercase tracking-widest">Esempio</span>
-          <h3 class="font-heading text-xl text-navy-900 mt-1 mb-2">Avvocato / Commercialista</h3>
-          <p class="text-gray-500 text-sm font-body">Aree di competenza, curriculum, articoli, modulo appuntamento.</p>
-          <p class="text-navy-700 font-semibold text-sm mt-3">👉 Clicca per vedere la demo →</p>
-        </div>
-      </div>
-
     </div>
-    <p class="text-center text-gray-500 font-body text-sm mt-8 italic">Non trovi la tua categoria? Scrivimi su WhatsApp e creo un esempio personalizzato — gratuitamente.</p>
+    <p class="text-center text-gray-500 font-body text-sm mt-8 italic">Non trovi la tua categoria? Scrivimi — creo un esempio su misura per te, gratis.</p>
   </div>
 </section>
 
-
-<!-- ===== GARANZIE ===== -->
+<!-- COSA OTTIENI -->
 <section class="py-20 px-5 bg-white">
   <div class="max-w-4xl mx-auto text-center mb-12 fade-in">
-    <p class="text-gold-500 text-sm font-semibold tracking-widest uppercase mb-2">Nessun rischio per te</p>
-    <h2 class="text-3xl md:text-4xl font-heading text-navy-900 mb-4">Le Mie Garanzie</h2>
+    <p class="text-gold-500 text-sm font-semibold tracking-widest uppercase mb-2">Cosa ottieni</p>
+    <h2 class="text-3xl md:text-4xl font-heading text-navy-900 mb-4">Non Solo un Sito. Un'Immagine.</h2>
   </div>
-  <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-6">
-    <div class="text-center fade-in p-6">
-      <div class="text-5xl mb-4">🛡️</div>
-      <h3 class="font-heading text-xl text-navy-900 mb-2">Soddisfatto o Rimborsato</h3>
-      <p class="text-gray-600 font-body text-sm leading-relaxed">Se entro 30 giorni dalla consegna non sei soddisfatto, restituisco l'intero importo senza fare domande.</p>
-    </div>
-    <div class="text-center fade-in p-6">
-      <div class="text-5xl mb-4">✍️</div>
-      <h3 class="font-heading text-xl text-navy-900 mb-2">Tutto per Iscritto</h3>
-      <p class="text-gray-600 font-body text-sm leading-relaxed">Preventivo, tempi e garanzie sono nel contratto. Niente accordi a voce, niente malintesi, niente sorprese.</p>
-    </div>
-    <div class="text-center fade-in p-6">
-      <div class="text-5xl mb-4">💬</div>
-      <h3 class="font-heading text-xl text-navy-900 mb-2">Supporto a Vita</h3>
-      <p class="text-gray-600 font-body text-sm leading-relaxed">Dopo la consegna resto disponibile su WhatsApp. Hai dubbi o vuoi una modifica piccola? Mi scrivi e rispondo. Senza costi extra.</p>
-    </div>
+  <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+    <div class="text-center fade-in p-6"><div class="text-5xl mb-4">🔗</div><h3 class="font-heading text-xl text-navy-900 mb-2">Il Link Perfetto per la Bio</h3><p class="text-gray-600 font-body text-sm leading-relaxed">Un indirizzo web elegante da mettere subito nella bio di Instagram, Facebook e TikTok. Quando i follower cliccano, trovano uno spazio all'altezza della tua attività.</p></div>
+    <div class="text-center fade-in p-6"><div class="text-5xl mb-4">🎨</div><h3 class="font-heading text-xl text-navy-900 mb-2">Design Su Misura</h3><p class="text-gray-600 font-body text-sm leading-relaxed">Niente template generici. Ogni sito ha una sua identità visiva: colori, font e atmosfera pensati appositamente per la tua attività e il tuo stile.</p></div>
+    <div class="text-center fade-in p-6"><div class="text-5xl mb-4">📱</div><h3 class="font-heading text-xl text-navy-900 mb-2">Perfetto su Smartphone</h3><p class="text-gray-600 font-body text-sm leading-relaxed">I clienti cliccano dalla bio sul telefono. Il tuo sito si apre rapido, bello e funzionale su qualsiasi schermo — esattamente come deve essere.</p></div>
+    <div class="text-center fade-in p-6"><div class="text-5xl mb-4">⚡</div><h3 class="font-heading text-xl text-navy-900 mb-2">Pronto in 24/48 Ore</h3><p class="text-gray-600 font-body text-sm leading-relaxed">Non aspetti settimane. In molti casi la bozza è pronta il giorno dopo. Per siti elaborati bastano pochi giorni. Il tuo link in bio è vicino.</p></div>
+    <div class="text-center fade-in p-6"><div class="text-5xl mb-4">✏️</div><h3 class="font-heading text-xl text-navy-900 mb-2">Modificabile da Solo</h3><p class="text-gray-600 font-body text-sm leading-relaxed">Aggiorna menù, foto e orari da solo dal telefono. Ti spiego tutto in meno di un'ora. Nessuna dipendenza da tecnici per sempre.</p></div>
+    <div class="text-center fade-in p-6"><div class="text-5xl mb-4">🛡️</div><h3 class="font-heading text-xl text-navy-900 mb-2">Soddisfatto o Rimborsato</h3><p class="text-gray-600 font-body text-sm leading-relaxed">Vedi la bozza completa prima di pagare. Se entro 30 giorni non sei soddisfatto, restituisco tutto. Zero rischi, solo risultati.</p></div>
   </div>
 </section>
 
-
-<!-- ===== FAQ ===== -->
+<!-- FAQ -->
 <section class="py-20 px-5 bg-cream">
   <div class="max-w-3xl mx-auto">
     <div class="text-center mb-12 fade-in">
@@ -335,58 +272,58 @@
     <div class="space-y-3 fade-in">
       <div class="bg-white rounded-xl shadow-sm overflow-hidden">
         <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center font-heading text-navy-900 text-base font-semibold hover:bg-gray-50 transition-colors">
-          Quanto costa un sito web?
+          Ho già Instagram e Facebook. Perché mi serve un sito?
           <svg class="faq-arrow w-5 h-5 text-gold-500 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="faq-body px-6 pb-5 text-gray-600 font-body leading-relaxed text-sm">Dipende da cosa hai bisogno. Un sito vetrina parte da poche centinaia di euro. Un sito con prenotazioni, e-commerce o funzionalità avanzate ha costi maggiori. Ti invio un preventivo gratuito entro 24 ore — scrivimi su WhatsApp.</div>
+        <div class="faq-body px-6 pb-5 text-gray-600 font-body leading-relaxed text-sm">I social sono fantastici per i contenuti e il contatto quotidiano. Ma cambiano continuamente, l'algoritmo decide cosa si vede, e non ti appartengono davvero. Il sito è il tuo spazio stabile, controllato e professionale — che dura nel tempo e che i clienti trovano in un click dalla bio. Completa ciò che hai, non lo sostituisce.</div>
       </div>
       <div class="bg-white rounded-xl shadow-sm overflow-hidden">
         <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center font-heading text-navy-900 text-base font-semibold hover:bg-gray-50 transition-colors">
-          Il sito sarà visibile su Google?
+          Quanto costa?
           <svg class="faq-arrow w-5 h-5 text-gold-500 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="faq-body px-6 pb-5 text-gray-600 font-body leading-relaxed text-sm">Sì. Ogni sito che creo è ottimizzato per i motori di ricerca (SEO base inclusa). Per comparire tra i primi risultati locali, posso seguirti con una strategia SEO locale dedicata.</div>
+        <div class="faq-body px-6 pb-5 text-gray-600 font-body leading-relaxed text-sm">Dipende da quanto vuoi nel sito. Un sito elegante e completo parte da poche centinaia di euro. Ti invio un preventivo scritto e dettagliato prima di iniziare — il prezzo non cambia mai. Scrivimi su WhatsApp per parlarne senza impegno.</div>
       </div>
       <div class="bg-white rounded-xl shadow-sm overflow-hidden">
         <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center font-heading text-navy-900 text-base font-semibold hover:bg-gray-50 transition-colors">
-          Devo occuparmi di hosting e dominio?
+          Davvero è pronto in 24/48 ore?
           <svg class="faq-arrow w-5 h-5 text-gold-500 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="faq-body px-6 pb-5 text-gray-600 font-body leading-relaxed text-sm">No. Ci penso io a tutto. Configuro e gestisco l'hosting. Ricevi solo una fattura annuale chiara, senza dover capire niente di tecnico.</div>
+        <div class="faq-body px-6 pb-5 text-gray-600 font-body leading-relaxed text-sm">Per la maggior parte dei siti sì — la bozza arriva il giorno dopo o al massimo in due giorni. Per siti con molte sezioni o funzioni particolari possono volerci qualche giorno in più. In ogni caso, mai settimane. Ti dico i tempi esatti prima di iniziare.</div>
       </div>
       <div class="bg-white rounded-xl shadow-sm overflow-hidden">
         <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center font-heading text-navy-900 text-base font-semibold hover:bg-gray-50 transition-colors">
-          Il sito funzionerà anche sullo smartphone?
+          Non ho foto professionali. Posso farlo lo stesso?
           <svg class="faq-arrow w-5 h-5 text-gold-500 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="faq-body px-6 pb-5 text-gray-600 font-body leading-relaxed text-sm">Assolutamente sì. Tutti i siti che creo sono progettati prima per smartphone, poi per PC e tablet. Oltre il 70% delle persone navega da cellulare — il tuo sito sarà perfetto su ogni schermo.</div>
+        <div class="faq-body px-6 pb-5 text-gray-600 font-body leading-relaxed text-sm">Assolutamente sì. Posso usare le foto che hai già — anche quelle scattate col telefono. In alternativa uso immagini professionali gratuite perfettamente in tema con la tua attività. Il risultato è sempre curato e di qualità.</div>
       </div>
       <div class="bg-white rounded-xl shadow-sm overflow-hidden">
         <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center font-heading text-navy-900 text-base font-semibold hover:bg-gray-50 transition-colors">
-          Posso aggiornare il sito da solo dopo la consegna?
+          Posso aggiornarlo da solo dopo?
           <svg class="faq-arrow w-5 h-5 text-gold-500 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="faq-body px-6 pb-5 text-gray-600 font-body leading-relaxed text-sm">Sì. Ti consegno un pannello semplice per cambiare testi, immagini e orari da solo, anche dal telefono. Faccio una formazione di 1 ora inclusa nel prezzo — di persona se vuoi.</div>
+        <div class="faq-body px-6 pb-5 text-gray-600 font-body leading-relaxed text-sm">Sì. Ti consegno un pannello semplicissimo — cambi testi, foto e orari da solo, anche dal telefono. Ti spiego come in meno di un'ora. E se hai dubbi, sono su WhatsApp per sempre, senza costi extra.</div>
       </div>
       <div class="bg-white rounded-xl shadow-sm overflow-hidden">
         <button class="faq-toggle w-full text-left px-6 py-5 flex justify-between items-center font-heading text-navy-900 text-base font-semibold hover:bg-gray-50 transition-colors">
           Posso vederti di persona prima di decidere?
           <svg class="faq-arrow w-5 h-5 text-gold-500 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="faq-body px-6 pb-5 text-gray-600 font-body leading-relaxed text-sm">Certamente. Sono disponibile per incontri di persona in tutta la provincia di Cuneo — Alba, Bra, Saluzzo, Fossano, Mondovì e dintorni. Per progetti importanti mi sposto anche fuori provincia. Scrivimi su WhatsApp e troviamo un orario.</div>
+        <div class="faq-body px-6 pb-5 text-gray-600 font-body leading-relaxed text-sm">Certamente. Sono disponibile di persona in tutta la provincia di Cuneo — Alba, Bra, Saluzzo, Fossano, Mondovì e dintorni. Per attività importanti mi sposto anche fuori provincia. Scrivimi su WhatsApp e organizziamo.</div>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- ===== CTA FINALE ===== -->
+<!-- CTA FINALE -->
 <section id="contatti" class="py-20 px-5 hero-bg text-white text-center">
   <div class="max-w-2xl mx-auto fade-in">
-    <p class="text-gold-400 text-sm font-semibold tracking-widest uppercase mb-3">Senza impegno</p>
-    <h2 class="text-3xl md:text-4xl font-heading mb-5">Parliamone — Via WhatsApp o di Persona</h2>
-    <p class="text-blue-200 font-body text-lg mb-10">Scrivimi due righe su chi sei e cosa fa la tua impresa. Ti rispondo in poche ore con idee concrete e un preventivo gratuito. Se sei in provincia di Cuneo, possiamo vederci di persona.</p>
-    <a href="https://wa.me/393282608679?text=Ciao!%20Ho%20visto%20il%20tuo%20sito%20e%20mi%20interesserebbe%20parlare%20di%20un%20sito%20web%20per%20la%20mia%20attività." target="_blank"
+    <p class="text-gold-400 text-sm font-semibold tracking-widest uppercase mb-3">È il momento</p>
+    <h2 class="text-3xl md:text-4xl font-heading mb-5">Metti Questo Link nella Bio.<br><span class="text-gold-400">Fai il Salto di Qualità.</span></h2>
+    <p class="text-blue-200 font-body text-lg mb-4">Hai già i social, hai già i clienti, hai già i contenuti.<br>Ti manca solo lo spazio ufficiale che completa tutto il resto.</p>
+    <p class="text-white font-body text-lg font-semibold mb-10">Scrivimi su WhatsApp — in 24/48 ore hai la tua bozza.</p>
+    <a href="https://wa.me/393282608679?text=Ciao!%20Gestisco%20un'attività%20e%20vorrei%20uno%20spazio%20ufficiale%20da%20mettere%20nella%20bio%20dei%20miei%20social." target="_blank"
        class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold px-10 py-5 rounded-full text-xl transition-colors shadow-2xl mb-6">
       <svg style="width:28px;height:28px;fill:white;flex-shrink:0;" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       Scrivimi su WhatsApp
@@ -395,329 +332,182 @@
   </div>
 </section>
 
-
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer class="bg-navy-900 text-blue-200 py-8 px-5 text-center font-body text-sm">
-  <p class="mb-2"><strong class="text-white">MIOSITO.IT</strong> · Il sito perfetto per te</p>
+  <p class="mb-2"><strong class="text-white">MIOSITO.IT</strong> · Il tuo spazio ufficiale online</p>
   <p>📍 Provincia di Cuneo, Piemonte · 💬 <a href="https://wa.me/393282608679" target="_blank" class="underline hover:text-white">WhatsApp: 328 260 8679</a></p>
   <p class="mt-4 text-blue-400 text-xs">© 2024 · <a href="#" class="underline hover:text-white">Privacy Policy</a></p>
 </footer>
 
+<!-- ======= DEMO MODALI ======= -->
 
-<!-- ========================================================= DEMO MODALI ========================================================= -->
+<!-- RIFUGIO -->
+<div id="demo-rifugio" class="demo-overlay">
+  <div class="demo-content">
+    <span class="close-btn" onclick="closeDemo('rifugio')">✕</span>
+    <div style="position:relative;"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=860&q=85" style="width:100%;height:300px;object-fit:cover;display:block;" alt="Rifugio">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,30,50,0.90),rgba(0,0,0,0.2) 60%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:32px 24px;text-align:center;">
+      <p style="font-family:'Lora',serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#a8d8f0;margin-bottom:6px;">A 2.100 mt · Aperto Dicembre–Aprile</p>
+      <h1 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:800;color:white;margin-bottom:8px;">Rifugio Stella Alpina</h1>
+      <p style="font-family:'Lora',serif;color:#d0eaff;font-size:14px;margin-bottom:18px;">Cucina di montagna · Pernottamenti · Noleggio sci</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+        <a href="#" style="background:#e5a913;color:#1c1c1c;padding:12px 24px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;font-size:13px;">🍽️ Vedi il Menù</a>
+        <a href="#" style="border:2px solid white;color:white;padding:12px 24px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;font-size:13px;">🛏️ Prenota una Notte</a>
+      </div>
+    </div></div>
+    <div style="padding:28px;background:#f0f5fa;">
+      <h2 style="font-family:'Playfair Display',serif;color:#1a3c5e;text-align:center;font-size:22px;margin-bottom:18px;">L'Esperienza Rifugio</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.07);"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=300&q=80" style="width:100%;height:90px;object-fit:cover;" alt="Cibo"><div style="padding:10px;text-align:center;"><p style="font-family:'Playfair Display',serif;color:#1a3c5e;font-weight:700;font-size:13px;">Cucina Valdostana</p><p style="font-family:'Lora',serif;font-size:11px;color:#999;margin-top:2px;">Fonduta, polenta, selvaggina</p></div></div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.07);"><img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=300&q=80" style="width:100%;height:90px;object-fit:cover;" alt="Sci"><div style="padding:10px;text-align:center;"><p style="font-family:'Playfair Display',serif;color:#1a3c5e;font-weight:700;font-size:13px;">Noleggio Attrezzatura</p><p style="font-family:'Lora',serif;font-size:11px;color:#999;margin-top:2px;">Sci, snowboard, ciaspole</p></div></div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.07);"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=300&q=80" style="width:100%;height:90px;object-fit:cover;" alt="Camera"><div style="padding:10px;text-align:center;"><p style="font-family:'Playfair Display',serif;color:#1a3c5e;font-weight:700;font-size:13px;">Pernottamenti</p><p style="font-family:'Lora',serif;font-size:11px;color:#999;margin-top:2px;">8 camere · Colazione inclusa</p></div></div>
+      </div>
+    </div>
+    <div style="padding:0 28px 28px;background:#f0f5fa;text-align:center;">
+      <p style="font-family:'Lora',serif;color:#bbb;font-size:12px;font-style:italic;">⬆️ Demo dimostrativa — il tuo sito sarà personalizzato con le tue foto e informazioni reali.</p>
+      <button onclick="closeDemo('rifugio')" style="margin-top:10px;background:#1a3c5e;color:white;padding:11px 26px;border-radius:50px;border:none;cursor:pointer;font-family:'Lora',serif;font-size:14px;">← Torna agli esempi</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCI CLUB -->
+<div id="demo-sciclub" class="demo-overlay">
+  <div class="demo-content">
+    <span class="close-btn" onclick="closeDemo('sciclub')">✕</span>
+    <div style="position:relative;"><img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=860&q=85" style="width:100%;height:300px;object-fit:cover;display:block;" alt="Sci">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,30,70,0.90),rgba(0,0,0,0.2) 60%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:32px 24px;text-align:center;">
+      <p style="font-family:'Lora',serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#a8cfff;margin-bottom:6px;">Scuola di Sci · Limone Piemonte</p>
+      <h1 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:800;color:white;margin-bottom:8px;">Sci Club Neve Blu</h1>
+      <p style="font-family:'Lora',serif;color:#a8cfff;font-size:14px;margin-bottom:18px;">Istruttori certificati · Corsi per tutti i livelli · Dal 1992</p>
+      <a href="#" style="background:#e5a913;color:#1c1c2e;padding:13px 28px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;">🎿 Prenota il tuo Corso</a>
+    </div></div>
+    <div style="padding:28px;background:#f0f4fb;">
+      <h2 style="font-family:'Playfair Display',serif;color:#003070;font-size:22px;text-align:center;margin-bottom:18px;">I Nostri Corsi</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div style="background:white;border-left:4px solid #003070;border-radius:10px;padding:14px;"><p style="font-family:'Playfair Display',serif;color:#003070;font-weight:700;font-size:14px;margin-bottom:3px;">🎿 Principianti</p><p style="font-family:'Lora',serif;font-size:12px;color:#666;margin-bottom:5px;">Da zero a scendere in sicurezza</p><p style="font-family:'Playfair Display',serif;color:#e5a913;font-weight:700;">da €120 / settimana</p></div>
+        <div style="background:white;border-left:4px solid #003070;border-radius:10px;padding:14px;"><p style="font-family:'Playfair Display',serif;color:#003070;font-weight:700;font-size:14px;margin-bottom:3px;">🏆 Agonismo</p><p style="font-family:'Lora',serif;font-size:12px;color:#666;margin-bottom:5px;">Allenamento tecnico con istruttori federali</p><p style="font-family:'Playfair Display',serif;color:#e5a913;font-weight:700;">da €180 / settimana</p></div>
+        <div style="background:white;border-left:4px solid #003070;border-radius:10px;padding:14px;"><p style="font-family:'Playfair Display',serif;color:#003070;font-weight:700;font-size:14px;margin-bottom:3px;">👨‍👩‍👧 Corsi Famiglia</p><p style="font-family:'Lora',serif;font-size:12px;color:#666;margin-bottom:5px;">Lezioni per genitori e bambini insieme</p><p style="font-family:'Playfair Display',serif;color:#e5a913;font-weight:700;">da €200 / settimana</p></div>
+        <div style="background:white;border-left:4px solid #003070;border-radius:10px;padding:14px;"><p style="font-family:'Playfair Display',serif;color:#003070;font-weight:700;font-size:14px;margin-bottom:3px;">🏂 Snowboard</p><p style="font-family:'Lora',serif;font-size:12px;color:#666;margin-bottom:5px;">Istruttori specializzati per ogni livello</p><p style="font-family:'Playfair Display',serif;color:#e5a913;font-weight:700;">da €130 / settimana</p></div>
+      </div>
+    </div>
+    <div style="padding:0 28px 28px;background:#f0f4fb;text-align:center;">
+      <p style="font-family:'Lora',serif;color:#bbb;font-size:12px;font-style:italic;">⬆️ Demo dimostrativa — il tuo sito includerà i tuoi corsi e istruttori reali.</p>
+      <button onclick="closeDemo('sciclub')" style="margin-top:10px;background:#003070;color:white;padding:11px 26px;border-radius:50px;border:none;cursor:pointer;font-family:'Lora',serif;font-size:14px;">← Torna agli esempi</button>
+    </div>
+  </div>
+</div>
+
+<!-- ENOTECA -->
+<div id="demo-enoteca" class="demo-overlay">
+  <div class="demo-content">
+    <span class="close-btn" onclick="closeDemo('enoteca')">✕</span>
+    <div style="position:relative;"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=860&q=85" style="width:100%;height:300px;object-fit:cover;display:block;" alt="Vino">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(50,15,5,0.90),rgba(0,0,0,0.2) 60%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:32px 24px;text-align:center;">
+      <p style="font-family:'Lora',serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#ffd9a0;margin-bottom:6px;">Selezione Vini Piemontesi · Alba</p>
+      <h1 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:800;color:white;margin-bottom:8px;">Enoteca Le Langhe</h1>
+      <p style="font-family:'Lora',serif;color:#ffd9a0;font-size:14px;margin-bottom:18px;">Barolo · Barbaresco · Moscato · Degustazioni guidate</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+        <a href="#" style="background:#e5a913;color:#1c1c1c;padding:12px 22px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;font-size:13px;">🍷 Prenota Degustazione</a>
+        <a href="#" style="border:2px solid white;color:white;padding:12px 22px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;font-size:13px;">🛒 Acquista Online</a>
+      </div>
+    </div></div>
+    <div style="padding:28px;background:#fdf8f0;">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+        <div style="background:white;border-radius:12px;padding:16px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);"><div style="font-size:28px;margin-bottom:6px;">🍷</div><p style="font-family:'Playfair Display',serif;color:#5c2000;font-weight:700;font-size:14px;">Barolo DOCG</p><p style="font-family:'Lora',serif;font-size:11px;color:#888;margin-top:3px;">Re dei vini · da €28</p></div>
+        <div style="background:white;border-radius:12px;padding:16px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);"><div style="font-size:28px;margin-bottom:6px;">🍾</div><p style="font-family:'Playfair Display',serif;color:#5c2000;font-weight:700;font-size:14px;">Barbaresco DOCG</p><p style="font-family:'Lora',serif;font-size:11px;color:#888;margin-top:3px;">Eleganza · da €22</p></div>
+        <div style="background:white;border-radius:12px;padding:16px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);"><div style="font-size:28px;margin-bottom:6px;">✨</div><p style="font-family:'Playfair Display',serif;color:#5c2000;font-weight:700;font-size:14px;">Moscato d'Asti</p><p style="font-family:'Lora',serif;font-size:11px;color:#888;margin-top:3px;">Dolce · da €10</p></div>
+      </div>
+    </div>
+    <div style="padding:0 28px 28px;background:#fdf8f0;text-align:center;">
+      <p style="font-family:'Lora',serif;color:#bbb;font-size:12px;font-style:italic;">⬆️ Demo dimostrativa — il tuo sito includerà la tua vera selezione ed eventi.</p>
+      <button onclick="closeDemo('enoteca')" style="margin-top:10px;background:#5c2000;color:white;padding:11px 26px;border-radius:50px;border:none;cursor:pointer;font-family:'Lora',serif;font-size:14px;">← Torna agli esempi</button>
+    </div>
+  </div>
+</div>
+
+<!-- BAR -->
+<div id="demo-bar" class="demo-overlay">
+  <div class="demo-content">
+    <span class="close-btn" onclick="closeDemo('bar')">✕</span>
+    <div style="position:relative;"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=860&q=85" style="width:100%;height:300px;object-fit:cover;display:block;" alt="Bar">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(30,15,0,0.90),rgba(0,0,0,0.2) 60%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:32px 24px;text-align:center;">
+      <p style="font-family:'Lora',serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#ffc87a;margin-bottom:6px;">Dal 1985 · Il tuo bar di fiducia</p>
+      <h1 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:800;color:white;margin-bottom:8px;">Bar Central</h1>
+      <p style="font-family:'Lora',serif;color:#ffc87a;font-size:14px;margin-bottom:18px;">Colazioni · Aperitivi · Stuzzichini · Cuneo centro</p>
+      <a href="#" style="background:#e5a913;color:#1c1c1c;padding:13px 28px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;">📋 Vedi il Menù</a>
+    </div></div>
+    <div style="padding:28px;background:#fffbf5;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div style="background:white;border-top:3px solid #e5a913;border-radius:10px;padding:16px;text-align:center;"><div style="font-size:28px;margin-bottom:6px;">☕</div><p style="font-family:'Playfair Display',serif;color:#5c3000;font-weight:700;font-size:14px;">Colazioni</p><p style="font-family:'Lora',serif;font-size:12px;color:#888;margin-top:3px;">Cornetti e cappuccini cremosi dal lunedì al sabato</p></div>
+        <div style="background:white;border-top:3px solid #e5a913;border-radius:10px;padding:16px;text-align:center;"><div style="font-size:28px;margin-bottom:6px;">🍹</div><p style="font-family:'Playfair Display',serif;color:#5c3000;font-weight:700;font-size:14px;">Aperitivo</p><p style="font-family:'Lora',serif;font-size:12px;color:#888;margin-top:3px;">Spritz, Negroni e stuzzichini dalle 18:00</p></div>
+        <div style="background:white;border-top:3px solid #e5a913;border-radius:10px;padding:16px;text-align:center;"><div style="font-size:28px;margin-bottom:6px;">🥐</div><p style="font-family:'Playfair Display',serif;color:#5c3000;font-weight:700;font-size:14px;">Pranzo Veloce</p><p style="font-family:'Lora',serif;font-size:12px;color:#888;margin-top:3px;">Panini, toast, insalatone fresche ogni giorno</p></div>
+        <div style="background:white;border-top:3px solid #e5a913;border-radius:10px;padding:16px;text-align:center;"><div style="font-size:28px;margin-bottom:6px;">🎉</div><p style="font-family:'Playfair Display',serif;color:#5c3000;font-weight:700;font-size:14px;">Serate & Eventi</p><p style="font-family:'Lora',serif;font-size:12px;color:#888;margin-top:3px;">Musica dal vivo, quiz night, eventi privati</p></div>
+      </div>
+    </div>
+    <div style="padding:0 28px 28px;background:#fffbf5;text-align:center;">
+      <p style="font-family:'Lora',serif;color:#bbb;font-size:12px;font-style:italic;">⬆️ Demo dimostrativa — il tuo sito includerà i tuoi veri menù, orari ed eventi.</p>
+      <button onclick="closeDemo('bar')" style="margin-top:10px;background:#5c3000;color:white;padding:11px 26px;border-radius:50px;border:none;cursor:pointer;font-family:'Lora',serif;font-size:14px;">← Torna agli esempi</button>
+    </div>
+  </div>
+</div>
 
 <!-- RISTORANTE -->
 <div id="demo-ristorante" class="demo-overlay">
   <div class="demo-content">
     <span class="close-btn" onclick="closeDemo('ristorante')">✕</span>
-    <div style="position:relative;">
-      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=860&q=85" style="width:100%;height:320px;object-fit:cover;display:block;" alt="Ristorante">
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(80,10,0,0.88),rgba(0,0,0,0.25) 60%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:32px 24px;text-align:center;">
-        <p style="font-family:'Lora',serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#ffc87a;margin-bottom:6px;">Ristorante Tradizionale · Alba, Cuneo</p>
-        <h1 style="font-family:'Playfair Display',serif;font-size:38px;font-weight:800;color:white;margin-bottom:10px;">Osteria da Carmelo</h1>
-        <p style="font-family:'Lora',serif;color:#ffe0b2;font-size:16px;margin-bottom:20px;">Cucina piemontese dal 1978 · Aperto tutti i giorni</p>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
-          <a href="#" style="background:#e5a913;color:#1c1c1c;padding:12px 26px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;font-size:14px;">📋 Vedi il Menu</a>
-          <a href="#" style="border:2px solid white;color:white;padding:12px 26px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;font-size:14px;">📅 Prenota un Tavolo</a>
-        </div>
+    <div style="position:relative;"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=860&q=85" style="width:100%;height:300px;object-fit:cover;display:block;" alt="Ristorante">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(80,10,0,0.88),rgba(0,0,0,0.2) 60%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:32px 24px;text-align:center;">
+      <p style="font-family:'Lora',serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#ffc87a;margin-bottom:6px;">Cucina Piemontese · Alba</p>
+      <h1 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:800;color:white;margin-bottom:8px;">Osteria da Carmelo</h1>
+      <p style="font-family:'Lora',serif;color:#ffe0b2;font-size:14px;margin-bottom:18px;">Tajarin · Brasato al Barolo · Tartufo · Dal 1978</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+        <a href="#" style="background:#e5a913;color:#1c1c1c;padding:12px 22px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;font-size:13px;">📋 Menù</a>
+        <a href="#" style="border:2px solid white;color:white;padding:12px 22px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;font-size:13px;">📅 Prenota Tavolo</a>
       </div>
-    </div>
+    </div></div>
     <div style="padding:28px;background:#faf8f3;">
-      <h2 style="font-family:'Playfair Display',serif;color:#7b2d00;text-align:center;font-size:24px;margin-bottom:6px;">I Nostri Piatti</h2>
-      <p style="font-family:'Lora',serif;color:#888;text-align:center;font-size:12px;margin-bottom:20px;font-style:italic;">Ingredienti freschi del territorio, ogni giorno</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;">
-        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
-          <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=300&q=80" style="width:100%;height:100px;object-fit:cover;" alt="Tajarin">
-          <div style="padding:12px;text-align:center;"><p style="font-family:'Playfair Display',serif;color:#7b2d00;font-weight:700;font-size:14px;">Tajarin al Ragù</p><p style="font-family:'Lora',serif;font-size:11px;color:#999;margin-top:3px;">Pasta fresca · €12</p></div>
-        </div>
-        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
-          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=300&q=80" style="width:100%;height:100px;object-fit:cover;" alt="Brasato">
-          <div style="padding:12px;text-align:center;"><p style="font-family:'Playfair Display',serif;color:#7b2d00;font-weight:700;font-size:14px;">Brasato al Barolo</p><p style="font-family:'Lora',serif;font-size:11px;color:#999;margin-top:3px;">Secondo · €18</p></div>
-        </div>
-        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
-          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=300&q=80" style="width:100%;height:100px;object-fit:cover;" alt="Dolci">
-          <div style="padding:12px;text-align:center;"><p style="font-family:'Playfair Display',serif;color:#7b2d00;font-weight:700;font-size:14px;">Panna Cotta</p><p style="font-family:'Lora',serif;font-size:11px;color:#999;margin-top:3px;">Dolce · €6</p></div>
-        </div>
-      </div>
-    </div>
-    <div style="padding:0 28px 24px;background:#faf8f3;">
-      <h3 style="font-family:'Playfair Display',serif;color:#7b2d00;font-size:18px;margin-bottom:12px;">⭐ Recensioni dei Clienti</h3>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-        <div style="background:white;border-radius:10px;padding:14px;box-shadow:0 1px 6px rgba(0,0,0,0.06);"><div style="color:#e5a913;font-size:13px;margin-bottom:5px;">★★★★★</div><p style="font-family:'Lora',serif;font-size:12px;color:#555;font-style:italic;margin-bottom:7px;">"Cibo eccellente, atmosfera calorosa. Il brasato al Barolo è da provare assolutamente!"</p><p style="font-family:'Lora',serif;font-size:11px;color:#999;font-weight:700;">— Maria G., Alba</p></div>
-        <div style="background:white;border-radius:10px;padding:14px;box-shadow:0 1px 6px rgba(0,0,0,0.06);"><div style="color:#e5a913;font-size:13px;margin-bottom:5px;">★★★★★</div><p style="font-family:'Lora',serif;font-size:12px;color:#555;font-style:italic;margin-bottom:7px;">"Siamo venuti per il compleanno di mia moglie: servizio impeccabile e tajarin favolosi."</p><p style="font-family:'Lora',serif;font-size:11px;color:#999;font-weight:700;">— Roberto M., Cuneo</p></div>
-      </div>
-    </div>
-    <div style="padding:0 28px 24px;background:#faf8f3;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-      <div style="background:white;border-radius:12px;padding:18px;box-shadow:0 1px 6px rgba(0,0,0,0.06);">
-        <h4 style="font-family:'Playfair Display',serif;color:#7b2d00;font-size:16px;margin-bottom:10px;">🕐 Orari</h4>
-        <table style="width:100%;font-family:'Lora',serif;font-size:13px;color:#555;border-collapse:collapse;">
-          <tr><td style="padding:4px 0;">Lun–Ven</td><td style="text-align:right;padding:4px 0;font-weight:700;">12:00–14:30, 19:00–22:30</td></tr>
-          <tr><td style="padding:4px 0;">Sabato</td><td style="text-align:right;padding:4px 0;font-weight:700;">12:00–23:00</td></tr>
-          <tr><td style="padding:4px 0;color:#c0392b;">Domenica</td><td style="text-align:right;padding:4px 0;color:#c0392b;">Chiuso</td></tr>
-        </table>
-      </div>
-      <div style="background:white;border-radius:12px;padding:18px;box-shadow:0 1px 6px rgba(0,0,0,0.06);display:flex;flex-direction:column;justify-content:space-between;">
-        <div><h4 style="font-family:'Playfair Display',serif;color:#7b2d00;font-size:16px;margin-bottom:8px;">📍 Dove Siamo</h4><p style="font-family:'Lora',serif;font-size:13px;color:#555;">Via Roma 42, Alba (CN)<br>Parcheggio gratuito</p></div>
-        <a href="#" style="display:block;background:#7b2d00;color:white;text-align:center;padding:10px;border-radius:8px;font-family:'Lora',serif;font-size:13px;font-weight:700;text-decoration:none;margin-top:12px;">🗺️ Apri su Google Maps</a>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.07);"><img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=300&q=80" style="width:100%;height:90px;object-fit:cover;" alt="Tajarin"><div style="padding:10px;text-align:center;"><p style="font-family:'Playfair Display',serif;color:#7b2d00;font-weight:700;font-size:13px;">Tajarin al Ragù</p><p style="font-family:'Lora',serif;font-size:11px;color:#999;margin-top:2px;">€12</p></div></div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.07);"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=300&q=80" style="width:100%;height:90px;object-fit:cover;" alt="Brasato"><div style="padding:10px;text-align:center;"><p style="font-family:'Playfair Display',serif;color:#7b2d00;font-weight:700;font-size:13px;">Brasato al Barolo</p><p style="font-family:'Lora',serif;font-size:11px;color:#999;margin-top:2px;">€18</p></div></div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.07);"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=300&q=80" style="width:100%;height:90px;object-fit:cover;" alt="Dolce"><div style="padding:10px;text-align:center;"><p style="font-family:'Playfair Display',serif;color:#7b2d00;font-weight:700;font-size:13px;">Panna Cotta</p><p style="font-family:'Lora',serif;font-size:11px;color:#999;margin-top:2px;">€6</p></div></div>
       </div>
     </div>
     <div style="padding:0 28px 28px;background:#faf8f3;text-align:center;">
-      <p style="font-family:'Lora',serif;color:#bbb;font-size:12px;font-style:italic;">⬆️ Demo dimostrativa — il tuo sito sarà personalizzato con le tue foto, menu e orari reali.</p>
-      <button onclick="closeDemo('ristorante')" style="margin-top:10px;background:#0d1b2a;color:white;padding:11px 26px;border-radius:50px;border:none;cursor:pointer;font-family:'Lora',serif;font-size:14px;">← Torna agli esempi</button>
+      <p style="font-family:'Lora',serif;color:#bbb;font-size:12px;font-style:italic;">⬆️ Demo dimostrativa — il tuo sito sarà personalizzato con le tue foto e menù reali.</p>
+      <button onclick="closeDemo('ristorante')" style="margin-top:10px;background:#7b2d00;color:white;padding:11px 26px;border-radius:50px;border:none;cursor:pointer;font-family:'Lora',serif;font-size:14px;">← Torna agli esempi</button>
     </div>
   </div>
 </div>
 
-
-<!-- IDRAULICO -->
-<div id="demo-idraulico" class="demo-overlay">
+<!-- B&B -->
+<div id="demo-bb" class="demo-overlay">
   <div class="demo-content">
-    <span class="close-btn" onclick="closeDemo('idraulico')">✕</span>
-    <div style="position:relative;">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=860&q=85" style="width:100%;height:300px;object-fit:cover;display:block;" alt="Idraulico">
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,40,80,0.88),rgba(0,0,0,0.2) 60%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:32px 24px;text-align:center;">
-        <div style="background:#c0392b;color:white;font-family:'Lora',serif;font-size:11px;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:10px;letter-spacing:1px;">🔴 PRONTO INTERVENTO H24</div>
-        <h1 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:800;color:white;margin-bottom:8px;">Marco Bianchi Idraulico</h1>
-        <p style="font-family:'Lora',serif;color:#a8d8f0;font-size:14px;margin-bottom:18px;">Impianti · Riparazioni · Caldaie · Cuneo e Provincia</p>
-        <div style="background:rgba(255,255,255,0.15);border-radius:12px;padding:14px 26px;border:1px solid rgba(255,255,255,0.3);">
-          <p style="font-family:'Playfair Display',serif;font-size:28px;font-weight:800;color:white;margin:0;">📞 333 000 0000</p>
-          <p style="font-family:'Lora',serif;font-size:11px;color:#a8d8f0;margin-top:4px;">Rispondo sempre — anche sabato e domenica</p>
-        </div>
+    <span class="close-btn" onclick="closeDemo('bb')">✕</span>
+    <div style="position:relative;"><img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=860&q=85" style="width:100%;height:300px;object-fit:cover;display:block;" alt="BB">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(15,35,20,0.90),rgba(0,0,0,0.2) 60%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:32px 24px;text-align:center;">
+      <p style="font-family:'Lora',serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#a8f0c0;margin-bottom:6px;">Agriturismo · Colline delle Langhe</p>
+      <h1 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:800;color:white;margin-bottom:8px;">Cascina Il Bosco</h1>
+      <p style="font-family:'Lora',serif;color:#a8f0c0;font-size:14px;margin-bottom:18px;">B&B · Colazione contadina · Vigneto · Degustazioni</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+        <a href="#" style="background:#e5a913;color:#1c1c1c;padding:12px 22px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;font-size:13px;">🛏️ Disponibilità</a>
+        <a href="#" style="border:2px solid white;color:white;padding:12px 22px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;font-size:13px;">📸 Galleria</a>
       </div>
-    </div>
-    <div style="padding:28px;background:#f0f4f8;">
-      <h2 style="font-family:'Playfair Display',serif;color:#1a3c5e;font-size:22px;text-align:center;margin-bottom:18px;">I Miei Servizi</h2>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-        <div style="background:white;border-left:4px solid #2980b9;border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:10px;"><span style="font-size:26px;">🚿</span><div><p style="font-family:'Playfair Display',serif;color:#1a3c5e;font-weight:700;font-size:14px;margin-bottom:2px;">Perdite d'acqua</p><p style="font-family:'Lora',serif;font-size:12px;color:#666;">Intervento in 2 ore</p></div></div>
-        <div style="background:white;border-left:4px solid #2980b9;border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:10px;"><span style="font-size:26px;">🔥</span><div><p style="font-family:'Playfair Display',serif;color:#1a3c5e;font-weight:700;font-size:14px;margin-bottom:2px;">Caldaie</p><p style="font-family:'Lora',serif;font-size:12px;color:#666;">Installazione e manutenzione</p></div></div>
-        <div style="background:white;border-left:4px solid #2980b9;border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:10px;"><span style="font-size:26px;">🛁</span><div><p style="font-family:'Playfair Display',serif;color:#1a3c5e;font-weight:700;font-size:14px;margin-bottom:2px;">Bagni e cucine</p><p style="font-family:'Lora',serif;font-size:12px;color:#666;">Ristrutturazioni complete</p></div></div>
-        <div style="background:white;border-left:4px solid #2980b9;border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:10px;"><span style="font-size:26px;">🌡️</span><div><p style="font-family:'Playfair Display',serif;color:#1a3c5e;font-weight:700;font-size:14px;margin-bottom:2px;">Riscaldamento</p><p style="font-family:'Lora',serif;font-size:12px;color:#666;">Nuovi impianti e rifacimenti</p></div></div>
-      </div>
-    </div>
-    <div style="padding:0 28px 24px;background:#f0f4f8;">
-      <h3 style="font-family:'Playfair Display',serif;color:#1a3c5e;font-size:18px;margin-bottom:12px;">📸 Ultimi Lavori Eseguiti</h3>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
-        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=250&q=80" style="width:100%;height:95px;object-fit:cover;border-radius:8px;" alt="Lavoro 1">
-        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=250&q=80" style="width:100%;height:95px;object-fit:cover;border-radius:8px;" alt="Lavoro 2">
-        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=250&q=80" style="width:100%;height:95px;object-fit:cover;border-radius:8px;" alt="Lavoro 3">
-      </div>
-    </div>
-    <div style="padding:0 28px 24px;background:#f0f4f8;">
-      <h3 style="font-family:'Playfair Display',serif;color:#1a3c5e;font-size:18px;margin-bottom:10px;">✅ Perché scelgono me</h3>
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        <div style="display:flex;gap:10px;background:white;border-radius:8px;padding:11px 14px;align-items:center;"><span style="color:#2980b9;font-size:15px;flex-shrink:0;">✔</span><p style="font-family:'Lora',serif;font-size:13px;color:#444;">Oltre <strong>15 anni di esperienza</strong> in provincia di Cuneo</p></div>
-        <div style="display:flex;gap:10px;background:white;border-radius:8px;padding:11px 14px;align-items:center;"><span style="color:#2980b9;font-size:15px;flex-shrink:0;">✔</span><p style="font-family:'Lora',serif;font-size:13px;color:#444;"><strong>Preventivo gratuito</strong> entro 24 ore, senza impegno</p></div>
-        <div style="display:flex;gap:10px;background:white;border-radius:8px;padding:11px 14px;align-items:center;"><span style="color:#2980b9;font-size:15px;flex-shrink:0;">✔</span><p style="font-family:'Lora',serif;font-size:13px;color:#444;"><strong>Lavoro in regola</strong>: fattura, garanzia e materiali certificati</p></div>
-      </div>
-    </div>
-    <div style="padding:0 28px 28px;background:#f0f4f8;text-align:center;">
-      <p style="font-family:'Lora',serif;color:#bbb;font-size:12px;font-style:italic;">⬆️ Demo dimostrativa — il tuo sito sarà personalizzato con i tuoi servizi, foto e contatti reali.</p>
-      <button onclick="closeDemo('idraulico')" style="margin-top:10px;background:#1a3c5e;color:white;padding:11px 26px;border-radius:50px;border:none;cursor:pointer;font-family:'Lora',serif;font-size:14px;">← Torna agli esempi</button>
-    </div>
-  </div>
-</div>
-
-
-<!-- DENTISTA -->
-<div id="demo-dentista" class="demo-overlay">
-  <div class="demo-content">
-    <span class="close-btn" onclick="closeDemo('dentista')">✕</span>
-    <div style="position:relative;">
-      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=860&q=85" style="width:100%;height:300px;object-fit:cover;display:block;" alt="Dentista">
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,60,50,0.88),rgba(0,0,0,0.2) 60%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:32px 24px;text-align:center;">
-        <p style="font-family:'Lora',serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#a8f0e0;margin-bottom:6px;">Il tuo sorriso, la nostra priorità</p>
-        <h1 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:800;color:white;margin-bottom:8px;">Studio Dott. Verdi</h1>
-        <p style="font-family:'Lora',serif;color:#a8f0e0;font-size:14px;margin-bottom:18px;">Odontoiatria · Via Roma 10, Bra (CN) · Dal 2008</p>
-        <a href="#" style="background:#1abc9c;color:white;padding:13px 28px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;">📅 Prenota la Tua Visita</a>
-      </div>
-    </div>
-    <div style="padding:28px;background:#f7fdfc;">
-      <h2 style="font-family:'Playfair Display',serif;color:#0d5c4a;font-size:22px;text-align:center;margin-bottom:18px;">I Nostri Trattamenti</h2>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
-        <div style="background:white;border-top:3px solid #1abc9c;border-radius:10px;padding:16px;text-align:center;"><div style="font-size:28px;margin-bottom:6px;">🦷</div><p style="font-family:'Playfair Display',serif;color:#0d5c4a;font-weight:700;font-size:13px;">Igiene dentale</p><p style="font-family:'Lora',serif;font-size:11px;color:#888;margin-top:3px;">da €80</p></div>
-        <div style="background:white;border-top:3px solid #1abc9c;border-radius:10px;padding:16px;text-align:center;"><div style="font-size:28px;margin-bottom:6px;">✨</div><p style="font-family:'Playfair Display',serif;color:#0d5c4a;font-weight:700;font-size:13px;">Sbiancamento</p><p style="font-family:'Lora',serif;font-size:11px;color:#888;margin-top:3px;">da €200</p></div>
-        <div style="background:white;border-top:3px solid #1abc9c;border-radius:10px;padding:16px;text-align:center;"><div style="font-size:28px;margin-bottom:6px;">😊</div><p style="font-family:'Playfair Display',serif;color:#0d5c4a;font-weight:700;font-size:13px;">Ortodonzia</p><p style="font-family:'Lora',serif;font-size:11px;color:#888;margin-top:3px;">Preventivo gratuito</p></div>
-      </div>
-    </div>
-    <div style="padding:0 28px 24px;background:#f7fdfc;">
-      <h3 style="font-family:'Playfair Display',serif;color:#0d5c4a;font-size:18px;margin-bottom:10px;">Perché i pazienti ci scelgono</h3>
-      <div style="display:flex;flex-direction:column;gap:7px;">
-        <div style="display:flex;gap:10px;background:white;border-radius:8px;padding:11px 14px;align-items:center;"><span style="color:#1abc9c;font-size:16px;">✔️</span><p style="font-family:'Lora',serif;font-size:13px;color:#444;">Visite senza dolore — anestesia efficace e tecniche moderne</p></div>
-        <div style="display:flex;gap:10px;background:white;border-radius:8px;padding:11px 14px;align-items:center;"><span style="color:#1abc9c;font-size:16px;">✔️</span><p style="font-family:'Lora',serif;font-size:13px;color:#444;">Appuntamenti puntuali — rispettiamo sempre il tuo tempo</p></div>
-        <div style="display:flex;gap:10px;background:white;border-radius:8px;padding:11px 14px;align-items:center;"><span style="color:#1abc9c;font-size:16px;">✔️</span><p style="font-family:'Lora',serif;font-size:13px;color:#444;">Preventivi chiari e scritti prima di qualsiasi trattamento</p></div>
-        <div style="display:flex;gap:10px;background:white;border-radius:8px;padding:11px 14px;align-items:center;"><span style="color:#1abc9c;font-size:16px;">✔️</span><p style="font-family:'Lora',serif;font-size:13px;color:#444;">Oltre 800 pazienti soddisfatti dal 2008</p></div>
-      </div>
-    </div>
-    <div style="padding:0 28px 24px;background:#f7fdfc;">
-      <h3 style="font-family:'Playfair Display',serif;color:#0d5c4a;font-size:18px;margin-bottom:10px;">⭐ Recensioni Verificate</h3>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-        <div style="background:white;border-radius:10px;padding:14px;box-shadow:0 1px 5px rgba(0,0,0,0.06);"><div style="color:#e5a913;font-size:12px;margin-bottom:5px;">★★★★★</div><p style="font-family:'Lora',serif;font-size:12px;color:#555;font-style:italic;margin-bottom:6px;">"Avevo molta paura del dentista. Qui mi sono sentita a mio agio fin dal primo momento."</p><p style="font-family:'Lora',serif;font-size:11px;color:#999;font-weight:700;">— Giovanna R., Bra</p></div>
-        <div style="background:white;border-radius:10px;padding:14px;box-shadow:0 1px 5px rgba(0,0,0,0.06);"><div style="color:#e5a913;font-size:12px;margin-bottom:5px;">★★★★★</div><p style="font-family:'Lora',serif;font-size:12px;color:#555;font-style:italic;margin-bottom:6px;">"Professionalità assoluta. Il preventivo era esatto alla fine, nessuna sorpresa."</p><p style="font-family:'Lora',serif;font-size:11px;color:#999;font-weight:700;">— Luca P., Cuneo</p></div>
-      </div>
-    </div>
-    <div style="padding:0 28px 28px;background:#f7fdfc;text-align:center;">
-      <p style="font-family:'Lora',serif;color:#bbb;font-size:12px;font-style:italic;">⬆️ Demo dimostrativa — il tuo sito includerà i tuoi trattamenti, staff e recensioni reali.</p>
-      <button onclick="closeDemo('dentista')" style="margin-top:10px;background:#0d5c4a;color:white;padding:11px 26px;border-radius:50px;border:none;cursor:pointer;font-family:'Lora',serif;font-size:14px;">← Torna agli esempi</button>
-    </div>
-  </div>
-</div>
-
-
-<!-- IMMOBILIARE -->
-<div id="demo-immobiliare" class="demo-overlay">
-  <div class="demo-content">
-    <span class="close-btn" onclick="closeDemo('immobiliare')">✕</span>
-    <div style="position:relative;">
-      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=860&q=85" style="width:100%;height:300px;object-fit:cover;display:block;" alt="Casa">
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(20,35,55,0.90),rgba(0,0,0,0.2) 60%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:32px 24px;text-align:center;">
-        <p style="font-family:'Lora',serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#b0c4de;margin-bottom:6px;">Dal 1995 nel cuore delle Langhe</p>
-        <h1 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:800;color:white;margin-bottom:8px;">Agenzia Casa Langhe</h1>
-        <p style="font-family:'Lora',serif;color:#b0c4de;font-size:14px;margin-bottom:18px;">Compravendita e affitti · Alba e dintorni</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
-          <a href="#" style="background:#e5a913;color:#1c1c2e;padding:12px 22px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;font-size:13px;">🏠 Vedi gli Immobili</a>
-          <a href="#" style="border:2px solid white;color:white;padding:12px 22px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;font-size:13px;">📞 Contattaci</a>
-        </div>
-      </div>
-    </div>
-    <div style="background:#2c3e50;padding:16px 28px;">
-      <p style="font-family:'Playfair Display',serif;color:white;font-size:15px;margin-bottom:10px;">🔍 Cerca il tuo immobile</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;">
-        <select style="border-radius:8px;padding:9px;font-family:'Lora',serif;font-size:12px;border:none;"><option>Tipo</option><option>Appartamento</option><option>Villa</option></select>
-        <select style="border-radius:8px;padding:9px;font-family:'Lora',serif;font-size:12px;border:none;"><option>Zona</option><option>Alba</option><option>Barolo</option></select>
-        <select style="border-radius:8px;padding:9px;font-family:'Lora',serif;font-size:12px;border:none;"><option>Budget</option><option>fino a 150k</option><option>fino a 300k</option></select>
-        <button style="background:#e5a913;color:#1c1c2e;border-radius:8px;padding:9px;font-family:'Lora',serif;font-size:12px;font-weight:700;border:none;cursor:pointer;">Cerca</button>
-      </div>
-    </div>
-    <div style="padding:24px 28px;background:#f4f7fb;">
-      <h2 style="font-family:'Playfair Display',serif;color:#2c3e50;font-size:20px;margin-bottom:14px;">Immobili in Evidenza</h2>
+    </div></div>
+    <div style="padding:28px;background:#f5faf6;">
+      <h2 style="font-family:'Playfair Display',serif;color:#1a4a25;font-size:20px;text-align:center;margin-bottom:16px;">Le Nostre Camere</h2>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
-          <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&q=80" style="width:100%;height:130px;object-fit:cover;" alt="Villa">
-          <div style="padding:14px;"><span style="background:#e5a913;color:#1c1c2e;font-size:10px;font-weight:700;padding:3px 8px;border-radius:10px;font-family:'Lora',serif;">VENDITA</span><p style="font-family:'Playfair Display',serif;color:#2c3e50;font-weight:700;font-size:14px;margin:8px 0 3px;">Villa con giardino – La Morra</p><p style="font-family:'Lora',serif;font-size:11px;color:#888;margin-bottom:8px;">4 locali · 180 mq · Giardino 500 mq</p><p style="font-family:'Playfair Display',serif;color:#4a6fa5;font-weight:800;font-size:18px;">€ 320.000</p></div>
-        </div>
-        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.08);">
-          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&q=80" style="width:100%;height:130px;object-fit:cover;" alt="Appartamento">
-          <div style="padding:14px;"><span style="background:#2980b9;color:white;font-size:10px;font-weight:700;padding:3px 8px;border-radius:10px;font-family:'Lora',serif;">AFFITTO</span><p style="font-family:'Playfair Display',serif;color:#2c3e50;font-weight:700;font-size:14px;margin:8px 0 3px;">App. centro storico – Alba</p><p style="font-family:'Lora',serif;font-size:11px;color:#888;margin-bottom:8px;">3 locali · 90 mq · 2° piano</p><p style="font-family:'Playfair Display',serif;color:#4a6fa5;font-weight:800;font-size:18px;">€ 750 / mese</p></div>
-        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.07);"><img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&q=80" style="width:100%;height:110px;object-fit:cover;" alt="Camera"><div style="padding:12px;"><p style="font-family:'Playfair Display',serif;color:#1a4a25;font-weight:700;font-size:14px;margin-bottom:2px;">Camera Vigna</p><p style="font-family:'Lora',serif;font-size:11px;color:#888;margin-bottom:6px;">Vista vigneto · 2 persone · Bagno privato</p><p style="font-family:'Playfair Display',serif;color:#2d7a3a;font-weight:800;font-size:16px;">da €95 / notte</p></div></div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.07);"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80" style="width:100%;height:110px;object-fit:cover;" alt="Suite"><div style="padding:12px;"><p style="font-family:'Playfair Display',serif;color:#1a4a25;font-weight:700;font-size:14px;margin-bottom:2px;">Suite Barolo</p><p style="font-family:'Lora',serif;font-size:11px;color:#888;margin-bottom:6px;">Vista colline · Vasca · Terrazza privata</p><p style="font-family:'Playfair Display',serif;color:#2d7a3a;font-weight:800;font-size:16px;">da €145 / notte</p></div></div>
       </div>
     </div>
-    <div style="padding:0 28px 24px;background:#f4f7fb;">
-      <h3 style="font-family:'Playfair Display',serif;color:#2c3e50;font-size:17px;margin-bottom:10px;">🤝 Perché affidarti a noi</h3>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-        <div style="background:white;border-radius:10px;padding:13px;display:flex;gap:10px;"><span style="font-size:20px;">📋</span><div><p style="font-family:'Playfair Display',serif;color:#2c3e50;font-size:13px;font-weight:700;margin-bottom:2px;">Gestione completa</p><p style="font-family:'Lora',serif;font-size:12px;color:#666;">Rogito, mutuo, pratiche: ci occupiamo di tutto</p></div></div>
-        <div style="background:white;border-radius:10px;padding:13px;display:flex;gap:10px;"><span style="font-size:20px;">📍</span><div><p style="font-family:'Playfair Display',serif;color:#2c3e50;font-size:13px;font-weight:700;margin-bottom:2px;">Esperti del territorio</p><p style="font-family:'Lora',serif;font-size:12px;color:#666;">30 anni di conoscenza del mercato Langhe</p></div></div>
-      </div>
-    </div>
-    <div style="padding:0 28px 28px;background:#f4f7fb;text-align:center;">
-      <p style="font-family:'Lora',serif;color:#bbb;font-size:12px;font-style:italic;">⬆️ Demo dimostrativa — il tuo sito includerà i tuoi annunci reali con filtri e mappa interattiva.</p>
-      <button onclick="closeDemo('immobiliare')" style="margin-top:10px;background:#2c3e50;color:white;padding:11px 26px;border-radius:50px;border:none;cursor:pointer;font-family:'Lora',serif;font-size:14px;">← Torna agli esempi</button>
+    <div style="padding:0 28px 28px;background:#f5faf6;text-align:center;">
+      <p style="font-family:'Lora',serif;color:#bbb;font-size:12px;font-style:italic;">⬆️ Demo dimostrativa — il tuo sito includerà le tue camere e disponibilità reali.</p>
+      <button onclick="closeDemo('bb')" style="margin-top:10px;background:#1a4a25;color:white;padding:11px 26px;border-radius:50px;border:none;cursor:pointer;font-family:'Lora',serif;font-size:14px;">← Torna agli esempi</button>
     </div>
   </div>
 </div>
 
-
-<!-- ESTETICA -->
-<div id="demo-estetica" class="demo-overlay">
-  <div class="demo-content">
-    <span class="close-btn" onclick="closeDemo('estetica')">✕</span>
-    <div style="position:relative;">
-      <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=860&q=85" style="width:100%;height:300px;object-fit:cover;display:block;" alt="Centro estetico">
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(80,20,82,0.88),rgba(0,0,0,0.2) 60%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:32px 24px;text-align:center;">
-        <p style="font-family:'Lora',serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#f3c6f7;margin-bottom:6px;">Benessere e bellezza · Cuneo</p>
-        <h1 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:800;color:white;margin-bottom:8px;">Centro Estetico Magnolia</h1>
-        <p style="font-family:'Lora',serif;color:#f3c6f7;font-size:14px;margin-bottom:18px;">Trattamenti viso e corpo · Estetista con 20 anni di esperienza</p>
-        <a href="#" style="background:white;color:#6d3b6e;padding:13px 26px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;">🌸 Prenota il tuo Trattamento</a>
-      </div>
-    </div>
-    <div style="padding:28px;background:#fdf6ff;">
-      <h2 style="font-family:'Playfair Display',serif;color:#6d3b6e;font-size:22px;text-align:center;margin-bottom:6px;">I Nostri Trattamenti</h2>
-      <p style="font-family:'Lora',serif;color:#888;text-align:center;font-size:12px;margin-bottom:18px;font-style:italic;">Solo prodotti professionali certificati</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(109,59,110,0.08);">
-          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=300&q=80" style="width:100%;height:95px;object-fit:cover;" alt="Viso">
-          <div style="padding:12px;"><p style="font-family:'Playfair Display',serif;color:#6d3b6e;font-weight:700;font-size:14px;margin-bottom:3px;">✨ Pulizia Viso</p><p style="font-family:'Lora',serif;font-size:11px;color:#888;margin-bottom:5px;">Idratazione e radiofrequenza</p><p style="font-family:'Playfair Display',serif;color:#c56cd0;font-weight:700;font-size:14px;">da €45</p></div>
-        </div>
-        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(109,59,110,0.08);">
-          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=300&q=80" style="width:100%;height:95px;object-fit:cover;" alt="Massaggio">
-          <div style="padding:12px;"><p style="font-family:'Playfair Display',serif;color:#6d3b6e;font-weight:700;font-size:14px;margin-bottom:3px;">💆 Massaggio Relax</p><p style="font-family:'Lora',serif;font-size:11px;color:#888;margin-bottom:5px;">Decontratturante o hot stone</p><p style="font-family:'Playfair Display',serif;color:#c56cd0;font-weight:700;font-size:14px;">da €55</p></div>
-        </div>
-        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(109,59,110,0.08);">
-          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=300&q=80" style="width:100%;height:95px;object-fit:cover;" alt="Nail">
-          <div style="padding:12px;"><p style="font-family:'Playfair Display',serif;color:#6d3b6e;font-weight:700;font-size:14px;margin-bottom:3px;">💅 Nail Art</p><p style="font-family:'Lora',serif;font-size:11px;color:#888;margin-bottom:5px;">Semipermanente e ricostruzione</p><p style="font-family:'Playfair Display',serif;color:#c56cd0;font-weight:700;font-size:14px;">da €30</p></div>
-        </div>
-        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(109,59,110,0.08);">
-          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=300&q=80" style="width:100%;height:95px;object-fit:cover;" alt="SPA">
-          <div style="padding:12px;"><p style="font-family:'Playfair Display',serif;color:#6d3b6e;font-weight:700;font-size:14px;margin-bottom:3px;">🌿 Pacchetto SPA</p><p style="font-family:'Lora',serif;font-size:11px;color:#888;margin-bottom:5px;">Viso + massaggio + aromaterapia</p><p style="font-family:'Playfair Display',serif;color:#c56cd0;font-weight:700;font-size:14px;">da €110</p></div>
-        </div>
-      </div>
-    </div>
-    <div style="padding:0 28px 24px;background:#fdf6ff;">
-      <div style="background:linear-gradient(135deg,#6d3b6e,#c56cd0);border-radius:14px;padding:22px;text-align:center;color:white;">
-        <p style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;margin-bottom:6px;">📅 Prenota Ora</p>
-        <p style="font-family:'Lora',serif;font-size:12px;color:rgba(255,255,255,0.85);margin-bottom:14px;">Disponibilità in tempo reale · Conferma via WhatsApp</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
-          <input type="date" style="border-radius:8px;padding:9px;font-family:'Lora',serif;font-size:12px;border:none;">
-          <select style="border-radius:8px;padding:9px;font-family:'Lora',serif;font-size:12px;border:none;"><option>Scegli trattamento</option><option>Pulizia viso</option><option>Massaggio</option></select>
-        </div>
-        <button style="background:white;color:#6d3b6e;padding:11px 24px;border-radius:50px;border:none;cursor:pointer;font-family:'Lora',serif;font-weight:700;font-size:13px;width:100%;">🌸 Conferma Prenotazione</button>
-      </div>
-    </div>
-    <div style="padding:0 28px 28px;background:#fdf6ff;text-align:center;">
-      <p style="font-family:'Lora',serif;color:#bbb;font-size:12px;font-style:italic;">⬆️ Demo dimostrativa — il tuo sito includerà i tuoi trattamenti, prezzi e disponibilità reali.</p>
-      <button onclick="closeDemo('estetica')" style="margin-top:10px;background:#6d3b6e;color:white;padding:11px 26px;border-radius:50px;border:none;cursor:pointer;font-family:'Lora',serif;font-size:14px;">← Torna agli esempi</button>
-    </div>
-  </div>
-</div>
-
-
-<!-- STUDIO LEGALE -->
-<div id="demo-studio" class="demo-overlay">
-  <div class="demo-content">
-    <span class="close-btn" onclick="closeDemo('studio')">✕</span>
-    <div style="position:relative;">
-      <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=860&q=85" style="width:100%;height:300px;object-fit:cover;display:block;" alt="Studio legale">
-      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(15,15,35,0.92),rgba(0,0,0,0.2) 60%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:32px 24px;text-align:center;">
-        <p style="font-family:'Lora',serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#a8a8d0;margin-bottom:6px;">Competenza e riservatezza dal 1998</p>
-        <h1 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:800;color:white;margin-bottom:8px;">Studio Avv. Ferraro</h1>
-        <p style="font-family:'Lora',serif;color:#a8a8d0;font-size:14px;margin-bottom:18px;">Diritto civile e commerciale · Cuneo</p>
-        <a href="#" style="background:#e5a913;color:#1c1c2e;padding:13px 26px;border-radius:50px;text-decoration:none;font-weight:700;font-family:'Lora',serif;">📞 Richiedi una Consulenza</a>
-      </div>
-    </div>
-    <div style="padding:28px;background:#f5f5fa;">
-      <h2 style="font-family:'Playfair Display',serif;color:#1c1c2e;font-size:22px;text-align:center;margin-bottom:18px;">Aree di Competenza</h2>
-      <div style="display:flex;flex-direction:column;gap:10px;">
-        <div style="background:white;border-left:4px solid #3d3d6b;border-radius:10px;padding:14px 16px;display:flex;gap:12px;"><span style="font-size:24px;flex-shrink:0;">⚖️</span><div><p style="font-family:'Playfair Display',serif;color:#1c1c2e;font-weight:700;font-size:14px;margin-bottom:3px;">Diritto del Lavoro</p><p style="font-family:'Lora',serif;font-size:12px;color:#666;">Licenziamenti, contratti, controversie tra datore e dipendente.</p></div></div>
-        <div style="background:white;border-left:4px solid #3d3d6b;border-radius:10px;padding:14px 16px;display:flex;gap:12px;"><span style="font-size:24px;flex-shrink:0;">🏠</span><div><p style="font-family:'Playfair Display',serif;color:#1c1c2e;font-weight:700;font-size:14px;margin-bottom:3px;">Diritto Immobiliare</p><p style="font-family:'Lora',serif;font-size:12px;color:#666;">Compravendite, contratti di locazione, successioni, condominio.</p></div></div>
-        <div style="background:white;border-left:4px solid #3d3d6b;border-radius:10px;padding:14px 16px;display:flex;gap:12px;"><span style="font-size:24px;flex-shrink:0;">📄</span><div><p style="font-family:'Playfair Display',serif;color:#1c1c2e;font-weight:700;font-size:14px;margin-bottom:3px;">Diritto Societario</p><p style="font-family:'Lora',serif;font-size:12px;color:#666;">Costituzione di società, contratti commerciali, recupero crediti.</p></div></div>
-      </div>
-    </div>
-    <div style="padding:0 28px 22px;background:#f5f5fa;display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-      <div style="background:white;border-radius:12px;padding:18px;box-shadow:0 1px 6px rgba(0,0,0,0.06);">
-        <h4 style="font-family:'Playfair Display',serif;color:#1c1c2e;font-size:15px;margin-bottom:8px;">👤 L'Avvocato</h4>
-        <p style="font-family:'Lora',serif;font-size:12px;color:#555;line-height:1.6;">Laureato con lode a Torino. 25 anni di esperienza. Iscritto all'Ordine di Cuneo. Specializzato in diritto civile e commerciale.</p>
-      </div>
-      <div style="background:white;border-radius:12px;padding:18px;box-shadow:0 1px 6px rgba(0,0,0,0.06);">
-        <h4 style="font-family:'Playfair Display',serif;color:#1c1c2e;font-size:15px;margin-bottom:8px;">🤝 Il Mio Approccio</h4>
-        <p style="font-family:'Lora',serif;font-size:12px;color:#555;line-height:1.6;">Prima consulenza gratuita. Spiego tutto in modo chiaro, senza tecnicismi. Preventivo onorari scritto prima di iniziare qualsiasi pratica.</p>
-      </div>
-    </div>
-    <div style="padding:0 28px 24px;background:#f5f5fa;">
-      <h3 style="font-family:'Playfair Display',serif;color:#1c1c2e;font-size:17px;margin-bottom:10px;">📰 Guide Legali Gratuite</h3>
-      <div style="display:flex;flex-direction:column;gap:7px;">
-        <div style="background:white;border-radius:8px;padding:11px 14px;display:flex;justify-content:space-between;align-items:center;"><p style="font-family:'Lora',serif;font-size:13px;color:#1c1c2e;font-weight:700;">Come tutelarsi in caso di licenziamento</p><span style="font-family:'Lora',serif;font-size:11px;color:#888;white-space:nowrap;margin-left:8px;">→ Leggi</span></div>
-        <div style="background:white;border-radius:8px;padding:11px 14px;display:flex;justify-content:space-between;align-items:center;"><p style="font-family:'Lora',serif;font-size:13px;color:#1c1c2e;font-weight:700;">Cosa controllare prima di firmare un affitto</p><span style="font-family:'Lora',serif;font-size:11px;color:#888;white-space:nowrap;margin-left:8px;">→ Leggi</span></div>
-        <div style="background:white;border-radius:8px;padding:11px 14px;display:flex;justify-content:space-between;align-items:center;"><p style="font-family:'Lora',serif;font-size:13px;color:#1c1c2e;font-weight:700;">Aprire una SRL: i passi fondamentali</p><span style="font-family:'Lora',serif;font-size:11px;color:#888;white-space:nowrap;margin-left:8px;">→ Leggi</span></div>
-      </div>
-    </div>
-    <div style="padding:0 28px 28px;background:#f5f5fa;text-align:center;">
-      <p style="font-family:'Lora',serif;color:#bbb;font-size:12px;font-style:italic;">⬆️ Demo dimostrativa — il tuo sito sarà personalizzato con le tue aree di specializzazione reali.</p>
-      <button onclick="closeDemo('studio')" style="margin-top:10px;background:#1c1c2e;color:white;padding:11px 26px;border-radius:50px;border:none;cursor:pointer;font-family:'Lora',serif;font-size:14px;">← Torna agli esempi</button>
-    </div>
-  </div>
-</div>
-
-
-<!-- ===== SCRIPTS ===== -->
+<!-- SCRIPTS -->
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
@@ -737,7 +527,6 @@
       if (e.target === this) { this.classList.remove('active'); document.body.style.overflow = ''; }
     });
   });
-
   document.querySelectorAll('.faq-toggle').forEach(btn => {
     btn.addEventListener('click', function() {
       const body = this.nextElementSibling;
